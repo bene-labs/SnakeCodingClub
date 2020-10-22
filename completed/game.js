@@ -34,7 +34,7 @@ const snake = {
 
 const fruit = {
     colour: "blue",
-    position: {x: get_random_number(0, board.width - 1), y: get_random_number(0, board.height - 1)},
+    position: {x: getRandomNumber(0, board.width - 1), y: getRandomNumber(0, board.height - 1)},
 }
 
 //
@@ -83,8 +83,8 @@ function eatFruit() {
 
 function respawnFruit() {
     if (snake.hasEaten === true) {
-        fruit.position.x = get_random_number(0, board.width - 1);
-        fruit.position.y = get_random_number(0, board.height - 1);
+        fruit.position.x = getRandomNumber(0, board.width - 1);
+        fruit.position.y = getRandomNumber(0, board.height - 1);
         snake.hasEaten = false;
     }
 }
@@ -93,7 +93,7 @@ function loop() {
     if (game.status === "playing") {
         moveSnake();
         eatFruit();
-        snake_body_movement(snake.body, snake.length, snake.headPosition, snake.hasEaten);
+        snakeBodyMovement(snake.body, snake.length, snake.headPosition, snake.hasEaten);
         respawnFruit();
     }
 }

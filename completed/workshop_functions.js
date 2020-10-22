@@ -27,7 +27,7 @@ function drawScore(score) {
 // Snake logic functions
 //
 
-function snake_body_movement(snake_body, snake_length, snake_head, fruit_eaten) {
+function snakeBodyMovement(snake_body, snake_length, snake_head, fruit_eaten) {
     snake_body.unshift({x: snake_head.x, y: snake_head.y})
     if (fruit_eaten === false) {
         snake_body.pop()
@@ -53,7 +53,7 @@ function show_game_over() {
     div.style.visibility = "visible"
 }
 
-function get_random_number(min, max) {
+function getRandomNumber(min, max) {
     return Math.floor(Math.random() * max) + min;
 }
 
