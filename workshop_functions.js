@@ -23,6 +23,12 @@ function drawScore(score) {
     scoreDiv.innerHTML = "Score " + score;
 }
 
+function drawSnakeBody(snakeBody, snakeBodyColour, snakeLength) {
+    for (var i = 0; i < snakeLength; i++) {
+        drawSquare(snakeBody[i].x, snakeBody[i].y, snakeBodyColour);
+    }
+}
+
 //
 // Snake logic functions
 //
