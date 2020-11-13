@@ -24,7 +24,7 @@ function drawScore(score) {
 }
 
 function drawSnakeBody(snakeBody, snakeBodyColour, snakeLength) {
-    for (var i = 0; i < snakeLength; i++) {
+    for (var i = 1; i < snakeLength; i++) {
         drawSquare(snakeBody[i].x, snakeBody[i].y, snakeBodyColour);
     }
 }
